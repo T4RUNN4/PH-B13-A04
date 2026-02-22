@@ -198,9 +198,9 @@ function handleRender(currTab) {
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </div>
-                <p class="text-[#64748B]">React Native Developer</p>
+                <p class="text-[#64748B]">${currJob.Role}</p>
                 <p class="my-5 text-[#64748B] text-sm">
-                ${currJob.Role} • ${currJob.Time} • ${currJob.Salary}
+                ${currJob.Location} • ${currJob.Time} • ${currJob.Salary}
                 </p>
                 <div class="mb-2 sts">
                     ${currJob.Status === "interview" ? '<button class="btn btn-soft btn-success">Interview</button>' : 
