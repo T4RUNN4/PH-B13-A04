@@ -130,7 +130,13 @@ function handleDelete(jobId) {
         noJobRender();
     } else {
         handleRender(currTab);
-        stateChangedJobRender();
+    }
+    
+    stateChangedJobRender();
+    if(currTab === "interview") {
+        availJob.innerText = `${intJobCount} of ${jobCount}`;
+    } else if(currTab === "reject") {
+        availJob.innerText = `${rejctJobCount} of ${jobCount}`;
     }
 }
 
@@ -153,8 +159,12 @@ function handleInterview(jobId) {
     intJobCount++;
 
     stateChangedJobRender();
-    if(currTab === "reject" && rejctJobCount === 0) {
-        noJobRender();
+    if(currTab === "reject") {
+        availJob.innerText = `${rejctJobCount} of ${jobCount}`;
+        handleRender(currTab);
+        if(rejctJobCount === 0) {
+            noJobRender();
+        } 
     } else {
         handleRender(currTab);
     }
@@ -179,8 +189,12 @@ function handleReject(jobId) {
     rejctJobCount++;
 
     stateChangedJobRender();
-    if(currTab === "interview" && intJobCount === 0) {
-        noJobRender();
+    if(currTab === "interview") {
+        availJob.innerText = `${intJobCount} of ${jobCount}`;
+        handleRender(currTab);
+        if(intJobCount === 0) {
+            noJobRender();
+        } 
     } else {
         handleRender(currTab);
     }
@@ -259,9 +273,7 @@ function tabChange(tab) {
         availJob.innerText = `${rejctJobCount} of ${jobCount}`;
     }
 
-
-
-    if((currTab === "interview" && intJobCount === 0) || (currTab === "reject" && rejctJobCount === 0)) {
+    if((currTab === "pending" && jobCount === 0) || (currTab === "interview" && intJobCount === 0) || (currTab === "reject" && rejctJobCount === 0)) {
         noJobRender();
     } else {
         handleRender(currTab);
