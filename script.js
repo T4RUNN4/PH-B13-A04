@@ -240,10 +240,13 @@ function tabChange(tab) {
 
     if(currTab === "pending") {
         allBtn.classList.add("btn-primary");
+        availJob.innerText = jobCount;
     } else if(currTab === "interview") {
         intBtn.classList.add("btn-primary");
+        availJob.innerText = `${intJobCount} of ${jobCount}`;
     } else if(currTab === "reject") {
         rjctBtn.classList.add("btn-primary");
+        availJob.innerText = `${rejctJobCount} of ${jobCount}`;
     }
 
 
