@@ -153,7 +153,11 @@ function handleInterview(jobId) {
     intJobCount++;
 
     stateChangedJobRender();
-    handleRender(currTab);
+    if(currTab === "reject" && rejctJobCount === 0) {
+        noJobRender();
+    } else {
+        handleRender(currTab);
+    }
 }
 
 function handleReject(jobId) {
@@ -175,7 +179,11 @@ function handleReject(jobId) {
     rejctJobCount++;
 
     stateChangedJobRender();
-    handleRender(currTab);
+    if(currTab === "interview" && intJobCount === 0) {
+        noJobRender();
+    } else {
+        handleRender(currTab);
+    }
 }
 
 function handleRender(currTab) {
