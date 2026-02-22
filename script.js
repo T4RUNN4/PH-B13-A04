@@ -153,6 +153,7 @@ function handleInterview(jobId) {
     intJobCount++;
 
     stateChangedJobRender();
+    handleRender(currTab);
 }
 
 function handleReject(jobId) {
@@ -174,6 +175,7 @@ function handleReject(jobId) {
     rejctJobCount++;
 
     stateChangedJobRender();
+    handleRender(currTab);
 }
 
 function handleRender(currTab) {
