@@ -145,7 +145,6 @@ function handleInterview(jobId) {
         return;
     }
 
-    const statusContainer = document.querySelector(`#${jobId} .sts`)
     const jobContainer = document.getElementById(jobId)
     jobs[jobId].Status = "interview";
     
@@ -153,8 +152,7 @@ function handleInterview(jobId) {
         rejctJobCount--;
         jobContainer.classList.remove("border-l-4", "border-red-400");
     }
-    
-    statusContainer.innerHTML = `<button class="btn btn-soft btn-success">Interview</button>`;
+
     jobContainer.classList.add("border-l-4", "border-green-400");
     intJobCount++;
 
@@ -174,8 +172,6 @@ function handleReject(jobId) {
     if(jobs[jobId].Status === "reject") {
         return;
     }
-
-    const statusContainer = document.querySelector(`#${jobId} .sts`)
     const jobContainer = document.getElementById(jobId)
     jobs[jobId].Status = "reject";
     
@@ -184,7 +180,6 @@ function handleReject(jobId) {
         jobContainer.classList.remove("border-l-4", "border-green-400");
     }
     
-    statusContainer.innerHTML = `<button class="btn btn-soft btn-error">Rejected</button>`;
     jobContainer.classList.add("border-l-4", "border-red-400");
     rejctJobCount++;
 
@@ -227,8 +222,8 @@ function handleRender(currTab) {
                 ${currJob.Location} • ${currJob.Time} • ${currJob.Salary}
                 </p>
                 <div class="mb-2 sts">
-                    ${currJob.Status === "interview" ? '<button class="btn btn-soft btn-success">Interview</button>' : 
-                        currJob.Status === "reject" ? '<button class="btn btn-soft btn-error">Rejected</button>' :
+                    ${currJob.Status === "interview" ? '<button class="btn btn-success">Interview</button>' : 
+                        currJob.Status === "reject" ? '<button class="btn btn-error">Rejected</button>' :
                         ''}
                 </div>
                 <p>
