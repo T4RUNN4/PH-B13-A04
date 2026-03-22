@@ -1,30 +1,36 @@
-# 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
-All this is used to target an element by using different css selector. "getElementById" targets using ID selector, "getElementByClass" targets using class selector. "querySelector" and "querySelectorAll" targets using any valid CSS selector. The main difference between them is "querySelectorAll" targets all the occurance and "querySelector" targets the first occurance.
+<div align="center">
+  
+  # Job Application tracker
+  
+  ![Assignment Project](https://img.shields.io/badge/Assignment%20Project-276749)
+  
+</div>
 
 <br>
-<br>
 
-# 2. How do you create and insert a new element into the DOM?
-1. Create a element using document.CreateElement('element_tag');
-2. Add content, attribute or html using element.textContent, element.innerHTML, element.setAttribute(), classList.add() 
-3. Add the element to the DOM using parentElement.appendChild(element)
+<p style="text-align: justify;">This was the fourth assignment assigned to me as the part of the course where I was provided with a Figma file and some instructions. My goal was to create a functional website with identical UI as Figma using raw HTML and CSS and vanilla javascript<p>
+<p style="text-align: justify;">I was successfully able to recreate the UI and make it functional as instructed which achieved me max marks for the assignment</p>
 
-<br>
-<br>
+Projects Sneakpeak: <br>
+<img src="./assets/thumbnail.png" alt="thumbnail"/>
 
-# 3. What is Event Bubbling? And how does it work?
-Event bubbling is a JS mechanism that triggers a event on parent element that get triggered in child element. <br>
-At first the JS created the complete DOM. After that if any event gets triggered, js goes to that element, triggers that element, than traverse back to root of the DOM from that child element and while travesing if there is any event in parent element, that one also gets triggered
+## Technical details
+<p>Tech Stack:</p>
 
-<br>
-<br>
+![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-5A0EF8?logo=daisyui&logoColor=fff)
 
-# 4. What is Event Delegation in JavaScript? Why is it useful?
-Event delagation means adding a single event to a parent element instead of using multiple event to the child element. So, if event gets triggered in child element, that one gets triggered by JS Event bubble mechanism.
-It's help improve performance, clean code and reduce memory leaks.
+## Features
 
-<br>
-<br>
+- <b> Core </b>: When the webapge loads, it will show all the job without any tag as well job counts on the two distinct places
+- <b> Delete Button </b>: Delete button will delete the job from the listing. 
+- <b> Interview Button </b>: If interview button clicked, that specific job needs to have a interview badge, a green border, count needs to be updated and interview tab must show the job
+- <b> Rejected Button </b>: If reject button clicked, that specific job needs to have a rejected badge, a red border, count needs to be updated and reject tab must show the job
+</br>
+</br>
 
-# 5. What is the difference between preventDefault() and stopPropagation() methods?
-"preventDefault()" stops the default behaviour of a browser when gets triggered by a event, while on the other hand "stopPropagation()" stops event bubbling.
+<hr>
+
+If you have any query related to this project, let me know.
